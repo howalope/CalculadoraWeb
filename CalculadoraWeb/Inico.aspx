@@ -38,13 +38,20 @@
                         <br />
                         <br />
                         <br />
-                        Experiencia Ganada:&nbsp;&nbsp; <asp:Label Font-Names="Calibri" ID="expLabel" runat="server"></asp:Label>
+                        Experiencia Ganada:&nbsp;&nbsp; <asp:Label Font-Names="Calibri" ID="expLabel" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="#056736"></asp:Label>
 
                         <br />
                         <br />
                         <br />
                         <br />
                         <asp:Button ID="BExp" runat="server" Font-Names="Calibri" Height="38px" Text="Calcular Experiencia" Width="145px" BackColor="#FE6B91" Font-Bold="True" ForeColor="#056736" OnClick="BExp_Click1" />
+                        <br />
+                        <br />
+                        <asp:RadioButton ID="BElf" runat="server" Font-Names="Calibri" ForeColor="#056736" GroupName="personajes" Text="Elfo" />
+                        <br />
+                        <asp:RadioButton ID="BBruja" runat="server" Font-Names="Calibri" ForeColor="#056736" GroupName="personajes" Text="Bruja" />
+                        <br />
+                        <asp:RadioButton ID="RadioButton4" runat="server" Font-Names="Calibri" ForeColor="#056736" GroupName="personajes" Text="Humano" />
                         <br />
                     </td>
                 </tr>

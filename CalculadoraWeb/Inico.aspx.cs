@@ -9,20 +9,40 @@ namespace CalculadoraWeb
 {
     public partial class Inico : System.Web.UI.Page
     {
+        int experiencia = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        
-        protected void BExp_Click1(object sender, EventArgs e)
+        public void personajes()
         {
             int num1 = Convert.ToInt32(diasTxt.Text);
             int num2 = Convert.ToInt32(mundosTxt.Text);
 
-            int experiencia = num1 *-4 + num2 * 6;
+            if (BElf.Checked)
+            {
+                 experiencia = num1 * -4 + num2 * 6;
+            } else
+            {
+                if (BBruja.Checked)
+                {
+                    experiencia = (num1 * -3) + num2 * 6;
 
-            expLabel.Text = experiencia.ToString();
+                } else
+                {
+                    experiencia = (num1 * -2) + num2 * 6;
+                }
+            }
+
+            expLabel.Text = experiencia.ToString() + "GB Exp";
+        }
+        
+        protected void BExp_Click1(object sender, EventArgs e)
+        {
+                        
+            personajes();
+            
         }
     }
 }
